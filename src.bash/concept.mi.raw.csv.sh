@@ -2,7 +2,7 @@
 
 # Usage: bash concept...sh <cdm-vocabulary-db>
 
-# Copyright (c) 2018 Aubrey Barnard.  This is free, open software
+# Copyright (c) 2019 Aubrey Barnard.  This is free, open software
 # released under the MIT License.  (See `LICENSE.txt` for details.)
 
 # Get the filename of the CDM vocabulary DB from the command line

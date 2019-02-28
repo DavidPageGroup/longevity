@@ -12,5 +12,5 @@ To contribute, use the typical fork and pull request workflow.
 
 -----
 
-Copyright (c) 2018 Aubrey Barnard.  This is free, open software released
+Copyright (c) 2019 Aubrey Barnard.  This is free, open software released
 under the MIT License.  (See `LICENSE.txt` for details.)
