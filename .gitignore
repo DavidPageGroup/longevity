@@ -1,0 +1,7 @@
+# Names / Patterns of files that Git should ignore
+
+# Copyright (c) 2018 Aubrey Barnard.  This is free, open software
+# released under the MIT License.  (See `LICENSE.txt` for details.)
+
+# Ignore backup files
+*~
