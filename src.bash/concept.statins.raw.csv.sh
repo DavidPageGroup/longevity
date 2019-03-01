@@ -19,7 +19,8 @@ from concept
 where domain_id = 'Drug' and
   concept_class_id != 'Drug Interaction' and
   (
-    -- I'm not going to worry about redundant names
+    -- These are all the synonyms for statins.  I'm not going to worry
+    -- about redundant names.
     concept_name like '%atorvastatin%' or
     concept_name like '%atorlip%' or
     concept_name like '%atorva%' or
@@ -58,7 +59,7 @@ where domain_id = 'Drug' and
     concept_name like '%lipex%' or
     concept_name like '%zocor%'
   ) and (
-    -- Exclude major catories of false positives
+    -- Exclude major categories of false positives
     concept_name not like '%avastin%' and
     concept_name not like '%bevacizumab%' and
     concept_name not like '%acrivastine%'
