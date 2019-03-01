@@ -34,6 +34,9 @@ where domain_id = 'Drug' and
     concept_name like '%siofor%' or
     concept_name like '%metfogamma%' or
     concept_name like '%gilfor%'
+  ) and (
+    -- Exclude false positives
+    concept_name not like '%cobimetinib%'
   )
 order by domain_id, vocabulary_id, concept_id
 ;
