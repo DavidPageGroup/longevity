@@ -19,7 +19,7 @@ Requirements
 * [R]( https://www.r-project.org/)
 * [Common data model (CDM)]( https://github.com/OHDSI/CommonDataModel)
   [standardized vocabularies]( http://athena.ohdsi.org/) loaded into
-  SQLite
+  [SQLite]( https://sqlite.org/)
 * Electronic medical records data in the form of a CSV of events
 
 Code for these last two can be found in the repository [cdm-data](
