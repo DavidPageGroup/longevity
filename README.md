@@ -17,7 +17,7 @@ Requirements
 * [Barnapy]( https://github.com/afbarnard/barnapy)
 * [Esal]( https://github.com/afbarnard/esal)
 * [R]( https://www.r-project.org/)
-* [Common data model (CDM)( https://github.com/OHDSI/CommonDataModel)
+* [Common data model (CDM)]( https://github.com/OHDSI/CommonDataModel)
   [standardized vocabularies]( http://athena.ohdsi.org/) loaded into
   SQLite
 * Electronic medical records data in the form of a CSV of events
