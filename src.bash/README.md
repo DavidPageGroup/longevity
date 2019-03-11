@@ -6,10 +6,18 @@ This is how I have been finding concept IDs in the Common Data Model
 ([CDM]( https://github.com/OHDSI/CommonDataModel)) vocabulary in a
 documented and reproducible way.
 
-1. Write a script to find all the matching concepts.  The selection is
-   overly-broad to eliminate false negatives.  Examples are the
-   `concept.*.raw.csv.sh` scripts.  Basically, make a list of synonyms
-   to include and make a list of names of false positives to exclude.
+0. Make a directory like `.../longevity/ids` for all of your IDs work.
+   It's a good idea to keep your IDs targeted to a specific concept and
+   independent of individual experiments.  That way IDs can be combined
+   in various ways as needed.  Since the gathering of IDs is separate
+   from using them in analysis, it's a good idea to have a separate
+   directory.
+
+1. Write a script to find all the matching concepts by copying and
+   modifying one of the `concept.*.raw.csv.sh` scripts.  The selection
+   is overly-broad to eliminate false negatives.  Basically, make a list
+   of synonyms to include and make a list of names of false positives to
+   exclude.
 
 2. Look over the concepts to see if there are any large categories of
    false positives and, as needed, improve the script to remove these
