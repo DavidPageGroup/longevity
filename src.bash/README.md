@@ -54,3 +54,11 @@ documented and reproducible way.
 This process documents everything and makes the selection of concept IDs
 inspectable and reproducible.  (The concepts excluded by hand can be
 identified in the diff of the "raw" and "selected" files.)
+
+
+-----
+
+Copyright (c) 2019 Aubrey Barnard.
+
+This is free, open software released under the MIT License.  (See
+`LICENSE.txt` for details.)

@@ -46,3 +46,11 @@ in `src.bash/README.md`.
     https://github.com/DavidPageGroup/cdm-data/blob/master/sql/tables_evs.sqlite.sql)
     and [`dump_events.sqlite.sh`](
     https://github.com/DavidPageGroup/cdm-data/blob/master/bash/dump_events.sqlite.sh).
+
+
+-----
+
+Copyright (c) 2019 Aubrey Barnard.
+
+This is free, open software released under the MIT License.  (See
+`LICENSE.txt` for details.)

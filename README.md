@@ -28,5 +28,7 @@ https://github.com/DavidPageGroup/cdm-data).
 
 -----
 
-Copyright (c) 2019 Aubrey Barnard.  This is free, open software released
-under the MIT License.  (See `LICENSE.txt` for details.)
+Copyright (c) 2019 Aubrey Barnard.
+
+This is free, open software released under the MIT License.  (See
+`LICENSE.txt` for details.)
