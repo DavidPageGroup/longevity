@@ -30,7 +30,7 @@ in `src.bash/README.md`.
 
    This may take many hours (so use `nohup` or `disown` the process).
    When it finishes, check the log to make sure it says "Done
-   `main_api`".  If that message is not present, the process did not
+   \`main_api\`".  If that message is not present, the process did not
    finish correctly.
 
 5. Optional: Copy and modify
@@ -42,7 +42,7 @@ in `src.bash/README.md`.
        Rscript ~/repos/dpg/longevity/src.R/survival_analysis.01.w_age_sex.R data.01.statins-mi_xx.w_age_sex.csv &> survival_analysis_results.01.statins-mi_xx.w_age_sex.txt
 
 
-[1] See (`tables_evs.sqlite.sql`)[
-    https://github.com/DavidPageGroup/cdm-data/blob/master/sql/tables_evs.sqlite.sql]
-    and (`dump_events.sqlite.sh`)[
-    https://github.com/DavidPageGroup/cdm-data/blob/master/bash/dump_events.sqlite.sh].
+[1] See [`tables_evs.sqlite.sql`](
+    https://github.com/DavidPageGroup/cdm-data/blob/master/sql/tables_evs.sqlite.sql)
+    and [`dump_events.sqlite.sh`](
+    https://github.com/DavidPageGroup/cdm-data/blob/master/bash/dump_events.sqlite.sh).
