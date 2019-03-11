@@ -7,8 +7,9 @@ and reproducible way.  This assumes you have EMR event data in CSV form
 [1] and have already defined your exposure and outcome IDs as instructed
 in `src.bash/README.md`.
 
-0. Install `barnapy` by following the instructions at
-   https://github.com/afbarnard/barnapy.
+0. Install [`barnapy`]( https://github.com/afbarnard/barnapy) and
+   [`esal`]( https://github.com/afbarnard/esal) by following their
+   instructions.
 
 1. Optional: Copy and modify `mk_data.<data-number>.<covariates>.py` to
    define your survival analysis data.  Each new set of data decisions
@@ -32,6 +33,14 @@ in `src.bash/README.md`.
    When it finishes, check the log to make sure it says "Done
    \`main_api\`".  If that message is not present, the process did not
    finish correctly.
+
+   Note that `mk_data.01.w_age_sex.py` finds dependencies by adding its
+   parent directory to the [Python path](
+   https://docs.python.org/3/using/cmdline.html#envvar-PYTHONPATH), so
+   if your modified version of `mk_data.*.py` lives somewhere else (and
+   does not have `survival_data.py` and `event_data.py` as siblings),
+   you will need to add the appropriate directory to the Python path
+   yourself.
 
 5. Optional: Copy and modify
    `survival_analysis.<data-number>.<covariates>.R` to match
