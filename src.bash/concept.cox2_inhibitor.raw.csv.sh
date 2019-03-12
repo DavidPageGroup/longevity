@@ -25,7 +25,7 @@ where domain_id = 'Drug' and
     concept_name like '%lidoxib%' or
     concept_name like '%articox%' or
     concept_name like '%articoxib%' or
-    concept_name like '%artiflex%' or
+--    concept_name like '%artiflex%' or -- overloaded name - no good matches
     concept_name like '%artilog%' or
     concept_name like '%artix%' or
     concept_name like '%artixib%' or
@@ -74,9 +74,9 @@ where domain_id = 'Drug' and
     concept_name like '%eccoxolac%' or
     concept_name like '%edolar fort%' or
     concept_name like '%edopain%' or
-    concept_name like '%elac%' or
+--    concept_name like '%elac%' or -- too many false positives to be useful
     concept_name like '%elderin%' or
-    concept_name like '%eric%' or
+--    concept_name like '%eric%' or -- too many false positives to be useful
     concept_name like '%esodax%' or
     concept_name like '%etodin%' or
     concept_name like '%etodol%' or
@@ -86,10 +86,33 @@ where domain_id = 'Drug' and
     concept_name like '%etomax%' or
     concept_name like '%etonox%' or
     concept_name like '%etopan%' or
-    concept_name like '%etopin%' or
---  ) and (
+    concept_name like '%etopin%'
+  ) and (
     -- Exclude false positives
---    concept_name not like '%cobimetinib%'
+    concept_name not like '%celebration%' and
+    concept_name not like '%itch relif%' and
+    concept_name not like '%pain relif%' and
+    concept_name not like '%purelife%' and
+    concept_name not like '%betamethasone%' and
+    concept_name not like '%relifor%' and
+    concept_name not like '%dolocodon%' and
+    concept_name not like '%dolocupin%' and
+    concept_name not like '%artelac%' and
+    concept_name not like '%relacon%' and
+    concept_name not like '%melacine%' and
+    concept_name not like '%melaclear%' and
+    concept_name not like '%gelactiv%' and
+    concept_name not like '%delactic%' and
+    concept_name not like '%stelactiv%' and
+    concept_name not like '%surelac%' and
+    concept_name not like '%loperamide%' and
+    concept_name not like '%ass elac%' and
+    concept_name not like '%relacta%' and
+    concept_name not like '%ketodine%' and
+    concept_name not like '%acetolactate%' and
+    concept_name not like '%ketomax%' and
+    concept_name not like '%metomax%' and
+    concept_name not like '%ketopine%'
   )
 order by domain_id, vocabulary_id, concept_id
 ;
