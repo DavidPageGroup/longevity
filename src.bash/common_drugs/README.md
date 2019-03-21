@@ -1,11 +1,11 @@
 Common Drugs and Drug Classes
 =============================
 
-These are scripts that I have put together for common drugs and/or
+These are scripts that I have put together for common drugs and
 drug classes. Each individual drug or drug class is prescribed at
 least somewhat frequently, and each drug class contains only the
 seemingly most common representatives of that class. That is, these
-scripts are somewhat ad hoc do not aim for absolute completeness.
+scripts are somewhat ad hoc and do not aim for absolute completeness.
 
 
 Statins
@@ -55,8 +55,8 @@ Gabapentinoids
 - Pregabalin
 
 
-Selective Serotonin Reuptake Inhibitor
---------------------------------------
+Selective Serotonin Reuptake Inhibitors
+---------------------------------------
 
 - Sertraline
 - Fluoxetine
@@ -65,8 +65,8 @@ Selective Serotonin Reuptake Inhibitor
 - Paroxetine
 
 
-Calcium Channel Blocker
------------------------
+Calcium Channel Blockers
+------------------------
 
 - Amlodipine
 - Nifedipine
@@ -74,8 +74,8 @@ Calcium Channel Blocker
 - Diltiazem
 
 
-Beta Blocker
-------------
+Beta Blockers
+-------------
 
 - Metoprolol
 - Atenolol
@@ -83,8 +83,8 @@ Beta Blocker
 - Nebivolol
 
 
-Proton Pump Inhibitor
----------------------
+Proton Pump Inhibitors
+----------------------
 
 - Omeprazole
 - Esomeprazole
