@@ -91,7 +91,7 @@ Proton Pump Inhibitors
 - Pantoprazole
 - Lansoprazole
 - Dexlansoprazole
-
+- Rabeprazole
 
 -----
 
