@@ -86,7 +86,7 @@ Beta Blockers
 - Propeanolol
 - Nebivolol
 - Acebutolol
-- Bispropolol
+- Bisoprolol
 - Nadolol
 
 
