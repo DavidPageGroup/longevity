@@ -34,7 +34,10 @@ where domain_id = 'Drug' and
     concept_name like '%lovastatin%' or -- lovastatin
     concept_name like '%mevinolin%' or
     concept_name like '%altoprev%' or
-    concept_name like '%mevacor%'
+    concept_name like '%mevacor%' or
+    concept_name like '%pitavastatin%' or -- pitavastatin
+    concept_name like '%livalo%' or
+    concept_name like '%zypitamag%'
 --  ) and (
     -- Exclude major categories of false positives
   )
