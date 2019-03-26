@@ -16,6 +16,7 @@ Statins
 - Pravastatin
 - Rosuvastatin
 - Lovastatin
+- Pitavastatin
 
 
 ACE Inhibitors
