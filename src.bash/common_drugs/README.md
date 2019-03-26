@@ -70,7 +70,7 @@ Calcium Channel Blockers
 
 - Amlodipine
 - Nifedipine
-- Verapimil
+- Verapamil
 - Diltiazem
 - Felodipine
 - Isradipine
