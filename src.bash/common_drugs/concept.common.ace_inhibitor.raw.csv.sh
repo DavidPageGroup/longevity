@@ -12,7 +12,7 @@ if [[ ! -f "${vocab_db}" ]]; then
     exit 2
 fi
 
-# Search for concepts matching a several of ACE inhibitors
+# Search for concepts matching a bunch of common ACE inhibitors
 sqlite3 -readonly "${vocab_db}" <<EOF
 select *
 from concept
@@ -20,16 +20,32 @@ where domain_id = 'Drug' and
   concept_class_id != 'Drug Interaction' and
   (
     -- I'm not going to worry about redundant names
+    concept_name like '%captopril%' or -- captopril
+    concept_name like '%captopryl%' or
+    concept_name like '%capoten%' or
+    concept_name like '%lopirin%' or
+    concept_name like '%enalapril%' or -- enalapril
+    concept_name like '%ramipril%' or -- ramipril
+    concept_name like '%altace%' or
+    concept_name like '%ramace%' or
+    concept_name like '%quinapril%' or -- quinapril
+    concept_name like '%accupril%' or
+    concept_name like '%perindopril%' or -- perindopril
+    concept_name like '%aceon%' or
+    concept_name like '%arcosyl%' or
+    concept_name like '%coversyl%' or
     concept_name like '%lisinopril%' or -- lisinopril
     concept_name like '%prinivil%' or
     concept_name like '%qbrelis%' or
     concept_name like '%zestril%' or
-    concept_name like '%enalapril%' or -- enalapril
     concept_name like '%benazepril%' or -- benazepril
     concept_name like '%lotensin%' or
-    concept_name like '%ramipril%' or -- ramipril
-    concept_name like '%altace%' or
-    concept_name like '%ramace%'
+    concept_name like '%trandolapril%' or -- trandolapril
+    concept_name like '%mavik%' or
+    concept_name like '%fosinopril%' or -- fosinopril
+    concept_name like '%monopril%' or
+    concept_name like '%moexipril%' or -- moexipril
+    concept_name like '%univasc%' or
   ) and (
     -- Exclude false positives
     concept_name not like '%tramacet%'
