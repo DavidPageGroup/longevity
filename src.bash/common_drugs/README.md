@@ -72,6 +72,10 @@ Calcium Channel Blockers
 - Nifedipine
 - Verapimil
 - Diltiazem
+- Felodipine
+- Isradipine
+- Nicardipine
+- Nisoldipine
 
 
 Beta Blockers
