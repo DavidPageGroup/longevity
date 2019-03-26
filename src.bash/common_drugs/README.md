@@ -83,8 +83,11 @@ Beta Blockers
 
 - Metoprolol
 - Atenolol
-- Propanolol
+- Propeanolol
 - Nebivolol
+- Acebutolol
+- Bispropolol
+- Nadolol
 
 
 Proton Pump Inhibitors
