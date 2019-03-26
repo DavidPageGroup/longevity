@@ -25,6 +25,12 @@ ACE Inhibitors
 - Enalapril
 - Benazepril
 - Ramipril
+- Captopril
+- Quinapril
+- Perindopril
+- Trandolapril
+- Fosinopril
+- Moexipril
 
 
 COX-2 Inhibitors
