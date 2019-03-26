@@ -69,9 +69,16 @@ where domain_id = 'Drug' and
     concept_name like '%cardene%' or
     concept_name like '%nisoldipine%' or -- nisoldipine
     concept_name like '%nisoldipin%' or
-    concept_name like '%sular%' or
---  ) and (
+    concept_name like '%sular%'
+  ) and (
     -- Exclude false positives
+    concept_name not like '%calandine%' and
+--okay    concept_name not like '%calanif%' and
+    concept_name not like '%calanus%' and
+--okay    concept_name not like '%isoptine%' and
+    concept_name not like '%fentiazac%' and
+    concept_name not like '%capsular%' and
+    concept_name not like '%grossularia%'
   )
 order by domain_id, vocabulary_id, concept_id
 ;
