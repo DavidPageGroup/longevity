@@ -45,7 +45,7 @@ where domain_id = 'Drug' and
     concept_name like '%fosinopril%' or -- fosinopril
     concept_name like '%monopril%' or
     concept_name like '%moexipril%' or -- moexipril
-    concept_name like '%univasc%' or
+    concept_name like '%univasc%'
   ) and (
     -- Exclude false positives
     concept_name not like '%tramacet%'
