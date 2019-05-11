@@ -1,7 +1,9 @@
-# Transform EMR event data into survival analysis data
+"""Transform EMR event data into survival analysis data"""
 
-# Copyright (c) 2018 Aubrey Barnard.  This is free software released
-# under the MIT License (https://choosealicense.com/licenses/mit/).
+# Copyright (c) 2018-2019 Aubrey Barnard.
+#
+# This is free software released under the MIT License
+# (https://choosealicense.com/licenses/mit/).
 
 
 import datetime
@@ -368,8 +370,11 @@ def build_example(
 ):
     # Build a feature vector of covariates if such a feature vector
     # function is specified
-    fv = (feature_vector_function(event_sequence.subsequence(
-              esal.Interval(when_lo), esal.Interval(when_hi)))
+    itvl = esal.Interval(when_lo, when_hi)
+    subseq = event_sequence.subsequence(
+        event_sequence.events_overlapping(
+            itvl.lo, itvl.hi, itvl.is_lo_open, itvl.is_hi_open))
+    fv = (feature_vector_function(subseq)
           if feature_vector_function is not None
           else None)
     return [
@@ -518,7 +523,7 @@ def print_survival_example(
     print(*ex, sep=delimiter, file=file)
 
 
-def main_api(
+def main_api( # TODO redo everything in terms of `cdmdata`
         exposure_types_filename,
         outcome_types_filename,
         *, # Prevent any additional positional arguments, like from the
