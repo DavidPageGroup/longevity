@@ -15,6 +15,7 @@ import sys
 
 from cdmdata import events
 from cdmdata import examples
+from cdmdata import features
 from cdmdata import records
 
 
@@ -65,6 +66,7 @@ name2time_parser = {
 # API entry points
 
 
+# TODO how label / classify examples?
 def gen_examples_at_intervals(
         events_csv_filename,
         time_type_name,
@@ -124,8 +126,7 @@ def gen_examples_at_intervals(
             itvl_len = mk_days_flt(hi - lo)
             n_evs = len(ev_seq.events_overlapping(lo, hi))
             age_flt = mk_years_flt(curr_age)
-            # TODO is there a reasonable label?
-            lbl = f'{i + 1}/{n_itvls}'
+            lbl = f'{i + 1}/{n_itvls}' # TODO remove this placeholder
             yield [ev_seq.id, lo, hi, lbl, None, None,
                    itvl_len, n_evs, age_flt]
             # Increment
@@ -151,6 +152,34 @@ def gen_ex_itvls(
             float(interval_length_days),
         ),
     )
+
+
+# TODO filter event records?
+# TODO fix dates?
+# TODO filter example records? (e.g. enforce minimum length or number of events)
+def mk_fvs(
+        events_csv_filename,
+        examples_csv_filename,
+        features_csv_filename,
+        positive_label,
+        time_type,
+):
+    time_parser = name2time_parser[time_type]
+    ex_cls_idx = examples.header_nm2idx['cls']
+    # Always include example ID and weight attributes as features
+    always_feat_keys = set([('_attr', 'id'), ('_attr', 'wgt')])
+    # Create a feature vector for each example definition
+    for ex, fv in features.mk_feature_vectors(
+            events_csv_filename,
+            examples_csv_filename,
+            features_csv_filename,
+            events_header=events.header(time_parser),
+            examples_header=examples.header(time_parser),
+            always_feature_keys=always_feat_keys,
+    ):
+        # Convert class label to binary indicator
+        cls = int(ex[ex_cls_idx] == positive_label)
+        features.write_vector(cls, fv, sys.stdout)
 
 
 # Main
